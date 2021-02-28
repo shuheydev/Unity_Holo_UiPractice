@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/App/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Samples/Mixed Reality Toolkit Examples/2.5.4/Experimental - Dwell/DwellExample.unity
+    guid: 214a3eff40efe654484f95e0bcb7d473
+  - enabled: 0
+    path: Assets/Samples/Mixed Reality Toolkit Examples/2.5.4/Experimental - MixedRealityKeyboard/Scenes/MixedRealityKeyboardExample.unity
+    guid: b21a91f417fdc7b41b531772ff092fcb
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 2ce517da24c30bd458f471bb45847b7d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ac2ff839a2f7e9146a35a0db3aa04be6, type: 2}

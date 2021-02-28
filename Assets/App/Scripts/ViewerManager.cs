@@ -10,8 +10,7 @@ public class ViewerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _isVisible = IsVisible;
-        gameObject.SetActive(_isVisible);
+        InitOnLoad();
     }
 
     // Update is called once per frame
@@ -20,7 +19,14 @@ public class ViewerManager : MonoBehaviour
 
     }
 
-    public void ToggleActiveState()
+    [RuntimeInitializeOnLoadMethod]
+    void InitOnLoad()
+    {
+        _isVisible = IsVisible;
+        gameObject.SetActive(_isVisible);
+    }
+
+    public void ToggleVisibility()
     {
         _isVisible = !_isVisible;
         gameObject.SetActive(_isVisible);
