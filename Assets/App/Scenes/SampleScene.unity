@@ -1628,7 +1628,7 @@ MonoBehaviour:
   rotateLerpTime: 0.000001
   scaleLerpTime: 0.000001
   enableConstraints: 1
-  constraintsManager: {fileID: 0}
+  constraintsManager: {fileID: 197500777}
   elasticsManager: {fileID: 0}
   onManipulationStarted:
     m_PersistentCalls:
@@ -9137,7 +9137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1500296015}
   boundsOverride: {fileID: 1500296019}
-  boundsCalculationMethod: 0
+  boundsCalculationMethod: 1
   activation: 3
   flattenAxis: 4
   boxPadding: {x: 0, y: 0, z: 0}
@@ -9153,7 +9153,7 @@ MonoBehaviour:
   scaleLerpTime: 0.001
   translateLerpTime: 0.001
   enableConstraints: 1
-  constraintsManager: {fileID: 0}
+  constraintsManager: {fileID: 1500296018}
   rotateStarted:
     m_PersistentCalls:
       m_Calls:
@@ -9246,8 +9246,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9249632, y: 0.63449967, z: 0.047590002}
-  m_Center: {x: -0.06922671, y: -0.13063765, z: 0.059046976}
+  m_Size: {x: 0.9249632, y: 1, z: 0.047590002}
+  m_Center: {x: -0.06922671, y: -0.3, z: 0.059046976}
 --- !u!114 &1500296020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10855,6 +10855,7 @@ GameObject:
   - component: {fileID: 1714924530}
   - component: {fileID: 1714924529}
   - component: {fileID: 1714924528}
+  - component: {fileID: 1714924536}
   m_Layer: 0
   m_Name: PressableButton(ToggleViewer)
   m_TagString: Untagged
@@ -11363,6 +11364,58 @@ Transform:
   m_Father: {fileID: 1363801130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714924536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714924527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e6657bab90ac149872e5361b42ea62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectAction:
+    id: 1
+    description: Select
+    axisConstraint: 2
+  voiceSelect: []
+  dwellTimeInSec: 2.18
+  onLookAtStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1714924530}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  whileLookingAtTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  onLookAway:
+    m_PersistentCalls:
+      m_Calls: []
+  onDwell:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  onTapDown:
+    m_PersistentCalls:
+      m_Calls: []
+  onTapUp:
+    m_PersistentCalls:
+      m_Calls: []
+  eyeCursorSnapToTargetCenter: 0
 --- !u!1 &1746484989
 GameObject:
   m_ObjectHideFlags: 0
